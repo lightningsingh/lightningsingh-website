@@ -1,60 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lightning Singh | 100m Dash Athlete</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-            font-size: 24px;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        .content {
-            padding: 20px;
-        }
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        Lightning Singh | 100m Dash Athlete
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="content">
-        <h2>Welcome to My Official Website</h2>
-        <p>Follow my journey, training routines, and competitions.</p>
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      {/* Navigation Bar */}
+      <nav className="flex justify-between items-center p-6 bg-gray-800">
+        <h1 className="text-2xl font-bold">Lightning Singh</h1>
+        <div className="space-x-6">
+          <a href="#about" className="hover:text-yellow-400">About</a>
+          <a href="#blog" className="hover:text-yellow-400">Blog</a>
+          <a href="#gallery" className="hover:text-yellow-400">Gallery</a>
+          <a href="#contact" className="hover:text-yellow-400">Contact</a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center py-32">
+        <motion.h2
+          className="text-4xl font-extrabold"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Breaking Limits, One Sprint at a Time
+        </motion.h2>
+        <p className="text-lg text-gray-400 mt-4">Follow my journey as a 100m dash athlete.</p>
+        <Button className="mt-6 bg-yellow-500 hover:bg-yellow-600">Explore More</Button>
+      </section>
+
+      {/* Featured Content */}
+      <section id="blog" className="py-20 px-10">
+        <h2 className="text-3xl font-bold text-center mb-6">Latest Updates</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card className="bg-gray-800 p-4">
+            <CardContent>
+              <h3 className="text-xl font-semibold">New Training Regime</h3>
+              <p className="text-gray-400">Discover my latest training routine for speed improvement.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-gray-800 p-4">
+            <CardContent>
+              <h3 className="text-xl font-semibold">Upcoming Race</h3>
+              <p className="text-gray-400">Exciting news about my next 100m sprint competition!</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-gray-800 p-4">
+            <CardContent>
+              <h3 className="text-xl font-semibold">Sprint Analysis</h3>
+              <p className="text-gray-400">Breaking down my latest sprint and improvements.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-center p-6 mt-10">
+        <p>© 2025 Lightning Singh. All rights reserved.</p>
+      </footer>
     </div>
-    <footer>
-        &copy; 2025 Lightning Singh. All rights reserved.
-    </footer>
-</body>
-</html>
+  );
+}
