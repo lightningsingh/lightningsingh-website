@@ -1,2 +1,0 @@
-# lightningsingh-website
-my website
