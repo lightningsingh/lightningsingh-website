@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5ff;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background: url('FB_IMG_1576685249403_Original.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 50, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #002855;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    background: #00509e;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* About */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.content {
+    text-align: left;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background: #002855;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
